@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab#3  DOM </title>
+<h1>
+    student registration
+</h1>
+<img src="oip.jfif" alt="Italian Trulli">
+<p>
+    The way for the new journey
+</p>
+<br><br>
+
+</head>
+<body>
+<style>
+.button-style {
+border: 1px solid rgb(0, 38, 255);
+border-radius: 25px;
+background-color: rgb(17, 153, 207);
+color: white;
+display: inline-block;
+width: 150px;
+}
+</style>
+<table id="studentCourses" class="courses">
+<thead>
+<tr>
+<th>Course #</th>
+<th>Course Name</th>
+<th>Year Taken</th>
+</tr>
+</thead>
+<tbody>
+<tr id="row1" class="row">
+<td>Course 1</td>
+<td>Javascript</td>
+<td>2021</td>
+</tr>
+<tr id="row2" class="row">
+<td>Course 2</td>
+<td>Cascading Style Sheet</td>
+<td>2019</td>
+</tr>
+<tr id="row3" class="row">
+<td>Course 3</td>
+<td>Hypertext Markup Language</td>
+<td>2018</td>
+</tr>
+</tbody>
+</table>
+</br>
+<input id="addTableBorder" type="button" value="Add Table Border" />
+<input id="addRowColor" type="button" value="Add Row Color" />
+<input id="addButtonStyling" type="button" value="Add Button Styling" />
+<script>
+const btnTableBorder = document.getElementById('addTableBorder');
+const btnRowColor = document.getElementById('addRowColor');
+const btnButtonStyling = document.getElementById('addButtonStyling');
+//Add click event to the button using addEventListener API
+btnTableBorder.addEventListener('click', function(event) {
+//Find the 'table' element 
+const table = document.getElementById('studentCourses');
+//Update its 'border' style 
+table.style.border = '1px solid green';
+});
+//Add click event to the button using addEventListener API
+btnRowColor.addEventListener('click', function(event) {
+//Find the 'row' element
+const row = document.querySelector('#row2');
+//Update its 'background-color' and 'color' style
+row.style.backgroundColor = 'yellow';
+row.style.color = 'brown';
+});
+//Add click event to the button using addEventListener API
+btnButtonStyling.addEventListener('click', function(event) {
+//Add the 'button-style' CSS class created above within the '<style>' tag
+btnButtonStyling.classList.add('button-style');
+});
+</script>
+</body>
+</html>
